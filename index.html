@@ -4,24 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Table Exercise - Amirreza Kia</title>
+    <title>Front-end Exercises - Amirreza Kia</title>
     <link rel="stylesheet" href="jadval-style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Dynamic Table Generator</h1>
-        <div class="input-section">
-            <label for="rows">Number of Rows:</label>
-            <input type="number" id="rows" min="1" max="20" value="3">
-
-            <label for="cols">Number of Columns:</label>
-            <input type="number" id="cols" min="1" max="20" value="3">
-
-            <button id="generateBtn">Generate Table</button>
+    <!-- Main Menu -->
+    <div id="mainMenu" class="screen active">
+        <div class="container">
+            <h1>Front-end Exercises</h1>
+            <p class="subtitle">HTML, CSS & JavaScript</p>
+            <div class="menu-buttons">
+                <button onclick="showExercise('exercise1')" class="menu-btn">
+                    <h3>Exercise 1</h3>
+                    <p>Dynamic Table Generator</p>
+                </button>
+                <button onclick="showExercise('exercise2')" class="menu-btn">
+                    <h3>Exercise 2</h3>
+                    <p>Form Validation</p>
+                </button>
+                <button onclick="showExercise('exercise3')" class="menu-btn">
+                    <h3>Exercise 3</h3>
+                    <p>Interactive Calculator</p>
+                </button>
+            </div>
         </div>
+    </div>
 
-        <div id="tableContainer"></div>
+    <!-- Exercise 1: Dynamic Table -->
+    <div id="exercise1" class="screen">
+        <div class="container">
+            <button onclick="showMainMenu()" class="back-btn">← Back to Menu</button>
+            <h1>Exercise 1: Dynamic Table Generator</h1>
+            <div class="input-section">
+                <label for="rows">Number of Rows:</label>
+                <input type="number" id="rows" min="1" max="20" value="3">
+
+                <label for="cols">Number of Columns:</label>
+                <input type="number" id="cols" min="1" max="20" value="3">
+
+                <button id="generateBtn">Generate Table</button>
+            </div>
+
+            <div id="tableContainer"></div>
+        </div>
+    </div>
+
+    <!-- Exercise 2: Form Validation -->
+    <div id="exercise2" class="screen">
+        <div class="container">
+            <button onclick="showMainMenu()" class="back-btn">← Back to Menu</button>
+            <h1>Exercise 2: Form Validation</h1>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="message"></div>
+        </div>
+    </div>
+
+    <!-- Exercise 3: Calculator -->
+    <div id="exercise3" class="screen">
+        <div class="container">
+            <button onclick="showMainMenu()" class="back-btn">← Back to Menu</button>
+            <h1>Exercise 3: Interactive Calculator</h1>
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" id="display" readonly>
+                </div>
+
+                <div class="buttons">
+                    <button onclick="clearDisplay()" class="clear">Clear</button>
+                    <button onclick="appendToDisplay('/')" class="operator">÷</button>
+                    <button onclick="appendToDisplay('*')" class="operator">×</button>
+                    <button onclick="deleteLast()" class="operator">⌫</button>
+
+                    <button onclick="appendToDisplay('7')" class="number">7</button>
+                    <button onclick="appendToDisplay('8')" class="number">8</button>
+                    <button onclick="appendToDisplay('9')" class="number">9</button>
+                    <button onclick="appendToDisplay('-')" class="operator">-</button>
+
+                    <button onclick="appendToDisplay('4')" class="number">4</button>
+                    <button onclick="appendToDisplay('5')" class="number">5</button>
+                    <button onclick="appendToDisplay('6')" class="number">6</button>
+                    <button onclick="appendToDisplay('+')" class="operator">+</button>
+
+                    <button onclick="appendToDisplay('1')" class="number">1</button>
+                    <button onclick="appendToDisplay('2')" class="number">2</button>
+                    <button onclick="appendToDisplay('3')" class="number">3</button>
+                    <button onclick="calculate()" class="equals">=</button>
+
+                    <button onclick="appendToDisplay('0')" class="number zero">0</button>
+                    <button onclick="appendToDisplay('.')" class="number">.</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="jadval-script.js"></script>

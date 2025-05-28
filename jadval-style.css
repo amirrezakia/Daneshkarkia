@@ -6,7 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
     padding: 20px;
 }
 
@@ -15,15 +16,101 @@ body {
     margin: 0 auto;
     background: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+
+/* Main Menu Styles */
+
+#mainMenu h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.2em;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.menu-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.menu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+.menu-btn h3 {
+    margin-bottom: 8px;
+    font-size: 1.3em;
+}
+
+.menu-btn p {
+    opacity: 0.9;
+    font-size: 1em;
+}
+
+
+/* Back Button */
+
+.back-btn {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+}
+
+
+/* Exercise Headers */
 
 h1 {
     text-align: center;
     color: #333;
     margin-bottom: 30px;
+    font-size: 2em;
 }
+
+
+/* Exercise 1: Dynamic Table Styles */
 
 .input-section {
     display: flex;
@@ -52,7 +139,7 @@ input[type="number"]:focus {
     border-color: #007bff;
 }
 
-button {
+#generateBtn {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
@@ -63,7 +150,7 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+#generateBtn:hover {
     background-color: #0056b3;
 }
 
@@ -99,4 +186,188 @@ tr:nth-child(even) td {
 
 tr:nth-child(even) td:nth-child(even) {
     background-color: #f1f1f1;
+}
+
+
+/* Exercise 2: Form Validation Styles */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#registrationForm button {
+    width: 100%;
+    max-width: 400px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto 0;
+}
+
+#registrationForm button:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+#message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+
+/* Exercise 3: Calculator Styles */
+
+.calculator {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.display {
+    margin-bottom: 15px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding: 0 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:active {
+    transform: translateY(0);
+}
+
+.number {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.number:hover {
+    background-color: #dee2e6;
+}
+
+.operator {
+    background-color: #007bff;
+    color: white;
+}
+
+.operator:hover {
+    background-color: #0056b3;
+}
+
+.equals {
+    background-color: #28a745;
+    color: white;
+    grid-row: span 2;
+    height: 130px;
+}
+
+.equals:hover {
+    background-color: #1e7e34;
+}
+
+.clear {
+    background-color: #dc3545;
+    color: white;
+    grid-column: span 2;
+}
+
+.clear:hover {
+    background-color: #c82333;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    .input-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .calculator {
+        width: 100%;
+        max-width: 300px;
+    }
+    #mainMenu h1 {
+        font-size: 2em;
+    }
 }
