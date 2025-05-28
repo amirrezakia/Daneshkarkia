@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.getElementById('password');
     const messageDiv = document.getElementById('message');
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+    form.addEventListener('submit', (submitEvent) => {
+        submitEvent.preventDefault();
 
         const username = usernameInput.value.trim();
         const password = passwordInput.value;
